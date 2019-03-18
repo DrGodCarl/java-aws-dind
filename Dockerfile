@@ -33,7 +33,6 @@ ADD https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.26-r0/glibc
 RUN apk --no-cache update && \
     apk --no-cache add py-setuptools ca-certificates curl groff jq build-base libstdc++ libgcc ncurses zlib bash ruby ruby-dev git openssh-client && \
     apk --no-cache add /tmp/glibc.apk /tmp/glibc-bin.apk && \
-    pip --no-cache-dir install awscli && \
     gem install --no-doc bundler && \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
