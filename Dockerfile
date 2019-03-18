@@ -23,7 +23,7 @@ RUN set -x \
 # Set up AWS CLI
 ARG CLI_VERSION=1.16.125
 
-RUN apk -v --update add python py-pip less && \
+RUN apk -v --update add python py-pip less ca-certificates && \
     pip install --upgrade awscli==$CLI_VERSION && \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
